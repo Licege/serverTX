@@ -4,13 +4,18 @@ import (
 	"database/sql"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strconv"
 )
 
 func GetUsers(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
+		queryPage := c.DefaultQuery("page", "0")
+		perPage := 10
 		users := []User{}
+		page, _ := strconv.ParseInt(queryPage, 10, 64)
+		limit := 10 * page
 
-		rows, err := db.Query(`select * from users`)
+		rows, err := db.Query(`select * from users limit $1 offset $2`, perPage, limit)
 
 		if err != nil {
 			panic(err)
