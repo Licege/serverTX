@@ -10,3 +10,10 @@ type User struct {
 	Enabled bool `json:"enabled"`
 }
 
+type Users []User
+
+type Result struct {
+	Users Users `json:"users"`
+	TotalCount int `json:"total_count"`
+}
+

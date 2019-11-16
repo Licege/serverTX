@@ -14,8 +14,10 @@ func GetUsers(db *sql.DB) gin.HandlerFunc {
 		users := []User{}
 		page, _ := strconv.ParseInt(queryPage, 10, 64)
 		limit := 10 * page
+		var count int
 
 		rows, err := db.Query(`select * from users limit $1 offset $2`, perPage, limit)
+		db.QueryRow(`select count(*) from users`).Scan(&count)
 
 		if err != nil {
 			panic(err)
@@ -42,6 +44,10 @@ func GetUsers(db *sql.DB) gin.HandlerFunc {
 			}
 			users = append(users, newUser)
 		}
-		c.JSON(http.StatusOK, users)
+		result := Result{
+			Users: users,
+			TotalCount: count,
+		}
+		c.JSON(http.StatusOK, result)
 	}
 }
