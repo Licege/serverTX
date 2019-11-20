@@ -10,9 +10,13 @@ func PutUser(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		id := c.Param("id")
 		requestBody := User{}
-		c.BindJSON(&requestBody)
+		errBind := c.BindJSON(&requestBody)
 
-		err := db.QueryRow(`update users set email = $1, phone = $2, name = $3, surname = $4, bonus_points = $5, enabled = $6 where id = $5`,
+		if errBind != nil {
+			panic(errBind)
+		}
+
+		_, err := db.Exec(`update users set email = $1, phone = $2, name = $3, surname = $4, bonus_points = $5, enabled = $6 where id = $7`,
 			requestBody.Email, requestBody.Phone, requestBody.Name, requestBody.Surname, requestBody.BonusPoints, requestBody.Enabled, id,
 		)
 

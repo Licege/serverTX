@@ -16,7 +16,7 @@ func GetUsers(db *sql.DB) gin.HandlerFunc {
 		limit := 10 * (page - 1)
 		var count int
 
-		rows, err := db.Query(`select * from users limit $1 offset $2`, perPage, limit)
+		rows, err := db.Query(`select * from users order by surname, name limit $1 offset $2`, perPage, limit)
 		db.QueryRow(`select count(*) from users`).Scan(&count)
 
 		if err != nil {
