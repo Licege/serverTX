@@ -24,6 +24,7 @@ func PutUser(db *sql.DB) gin.HandlerFunc {
 			panic(err)
 		}
 
-		c.Status(http.StatusNoContent)
+		c.JSON(http.StatusOK, requestBody)
+		//c.Status(http.StatusNoContent)
 	}
 }

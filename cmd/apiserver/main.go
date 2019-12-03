@@ -28,12 +28,16 @@ func main()  {
 
 	r := gin.Default()
 
+	// вырубаем CORS
+	//r.Use(LiberalCORS)
 	r.Use(cors.New(cors.Config{
 		AllowOrigins:  []string{"http://localhost:3000"},
 		AllowMethods:  []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"},
 		AllowHeaders:  []string{"Origin", "Content-Length", "Content-Type"},
 		ExposeHeaders: []string{"X-Total-Count"},
 	}))
+
+	//r.Static("/stat-img", "./image")
 
 	usersR := r.Group("/api/users")
 	{
@@ -75,4 +79,17 @@ func main()  {
 	}
 
 	r.Run(":9090")
+
+	/*
+
+	func LiberalCORS(c *gin.Context) {
+		c.Header("Access-Control-Allow-Origin", "*")
+		if c.Request.Method == "OPTIONS" {
+			if len(c.Request.Header["Access-Control-Request-Headers"]) > 0 {
+				c.Header("Access-Control-Allow-Headers", c.Request.Header["Access-Control-Request-Headers"][0])
+			}
+			c.AbortWithStatus(http.StatusOK)
+		}
+	}
+	 */
 }
