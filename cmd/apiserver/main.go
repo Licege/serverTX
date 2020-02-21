@@ -7,6 +7,7 @@ import (
 	_ "github.com/lib/pq"
 	"test2/cmd/apiserver/methods/categories"
 	"test2/cmd/apiserver/methods/menu"
+	"test2/cmd/apiserver/methods/profession"
 	"test2/cmd/apiserver/methods/staff"
 	"test2/cmd/apiserver/methods/users"
 	"test2/cmd/apiserver/methods/vacancies"
@@ -77,6 +78,13 @@ func main()  {
 		vacancyR.PUT("/:id", vacancies.PutVacancy(db))
 		vacancyR.DELETE("/:id", vacancies.DeleteVacancy(db))
 	}
+	professionR := r.Group("/api/professions")
+	{
+		professionR.GET("/", profession.GetProfessions(db))
+		professionR.POST("/", profession.PostProfession(db))
+		professionR.PUT("/:id", profession.PutProfession(db))
+	}
+
 
 	r.Run(":9090")
 
