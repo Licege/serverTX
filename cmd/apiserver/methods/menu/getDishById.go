@@ -15,10 +15,10 @@ func GetDishById(db *sql.DB) gin.HandlerFunc {
 			&dish.Id,
 			&dish.Title,
 			&dish.Description,
-			&dish.Category,
+			&dish.CategoryId,
 			&dish.Price,
 			&dish.Weight,
-			&dish.FileId)
+			&dish.Url)
 
 		c.JSON(http.StatusOK, dish)
 	}

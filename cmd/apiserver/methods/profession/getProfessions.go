@@ -10,7 +10,7 @@ func GetProfessions (db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		professions := []Profession{}
 
-		rows, err := db.Query(`select * from profession`)
+		rows, err := db.Query(`select * from professions`)
 
 		if err != nil {
 			panic(err)

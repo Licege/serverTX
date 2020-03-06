@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 	"test2/cmd/apiserver/methods/categories"
+	"test2/cmd/apiserver/methods/contacts"
 	"test2/cmd/apiserver/methods/menu"
 	"test2/cmd/apiserver/methods/profession"
 	"test2/cmd/apiserver/methods/staff"
@@ -83,6 +84,11 @@ func main()  {
 		professionR.GET("/", profession.GetProfessions(db))
 		professionR.POST("/", profession.PostProfession(db))
 		professionR.PUT("/:id", profession.PutProfession(db))
+	}
+	contactsR := r.Group("/api/contacts")
+	{
+		contactsR.GET("/", contacts.GetContacts(db))
+		contactsR.PUT("/", contacts.PutContacts(db))
 	}
 
 

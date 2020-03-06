@@ -11,11 +11,11 @@ func GetDishes(db *sql.DB) gin.HandlerFunc {
 		dishes := []Dish{}
 
 		rows, _ := db.Query(`SELECT * FROM dishes`)
-		var id, weight, price, category, fileId int
-		var title, description string
+		var id, weight, price, category int
+		var title, description, url string
 
 		for rows.Next(){
-			err := rows.Scan(&id, &title, &description, &weight, &price, &category, &fileId)
+			err := rows.Scan(&id, &title, &description, &category, &price, &weight, &url)
 			if err != nil {
 				panic(err)
 			}
@@ -23,10 +23,10 @@ func GetDishes(db *sql.DB) gin.HandlerFunc {
 				Id:          id,
 				Title:       title,
 				Description: description,
-				Weight:      weight,
+				CategoryId:    category,
 				Price:       price,
-				Category:    category,
-				FileId:      fileId,
+				Weight:      weight,
+				Url:      url,
 			}
 			dishes = append(dishes, newDish)
 		}

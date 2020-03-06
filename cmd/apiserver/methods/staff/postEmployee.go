@@ -24,6 +24,17 @@ func PostEmployee(db *sql.DB) gin.HandlerFunc {
 			panic(err)
 		}
 
-		c.JSON(http.StatusOK, lastID)
+		person := Person{
+			Id:         lastID,
+			Name:       requestBody.Name,
+			Surname:    requestBody.Surname,
+			Phone:      requestBody.Phone,
+			Address:    requestBody.Address,
+			Profession: requestBody.Profession,
+			FileId:     requestBody.FileId,
+		}
+
+
+		c.JSON(http.StatusOK, person)
 	}
 }

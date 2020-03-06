@@ -12,13 +12,13 @@ func PostDish(db *sql.DB) gin.HandlerFunc {
 		c.BindJSON(&requestBody)
 
 		var lastID int
-		err := db.QueryRow("INSERT INTO dishes (title, description, weight, price, category_id, file_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id",
+		err := db.QueryRow("INSERT INTO dishes (title, description, category_id, price, weight, url) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id",
 		requestBody.Title,
 		requestBody.Description,
-		requestBody.Weight,
+		requestBody.CategoryId,
 		requestBody.Price,
-		requestBody.Category,
-		requestBody.FileId).Scan(&lastID)
+		requestBody.Weight,
+		requestBody.Url).Scan(&lastID)
 
 		if err != nil {
 			panic(err)

@@ -12,7 +12,7 @@ func PutEmployee (db *sql.DB) gin.HandlerFunc {
 		requestBody := Person{}
 		c.BindJSON(&requestBody)
 
-		db.QueryRow(`UPDATE staff SET name = $1, surname = $2, phone = $3, address = $4, profession = $5, file_id = $6 where id = $7`,
+		_, err := db.Exec(`UPDATE staff SET name = $1, surname = $2, phone = $3, address = $4, id_profession = $5, file_id = $6 where id = $7`,
 			requestBody.Name,
 			requestBody.Surname,
 			requestBody.Phone,
@@ -20,11 +20,11 @@ func PutEmployee (db *sql.DB) gin.HandlerFunc {
 			requestBody.Profession,
 			requestBody.FileId,
 			id)
-/*
+
 		if err != nil {
 			panic(err)
 		}
-*/
+
 		c.Status(http.StatusOK)
 	}
 }
