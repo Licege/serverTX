@@ -12,13 +12,13 @@ func PostVacancy(db *sql.DB) gin.HandlerFunc {
 		c.BindJSON(&requestBody)
 
 		var lastID int
-		err := db.QueryRow(`INSERT INTO vacancy(title, requirements, description, salary_from, salary_to, file_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`,
+		err := db.QueryRow(`INSERT INTO vacancy(title, requirements, description, salary_from, salary_to, url) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`,
 			requestBody.Title,
 			requestBody.Requirements,
 			requestBody.Description,
 			requestBody.SalaryFrom,
 			requestBody.SalaryTo,
-			requestBody.FileId).Scan(&lastID)
+			requestBody.Url).Scan(&lastID)
 
 		if err != nil {
 			panic(err)

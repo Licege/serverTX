@@ -12,8 +12,9 @@ func PutCategory(db *sql.DB) gin.HandlerFunc {
 		requestBody := Category{}
 		c.BindJSON(&requestBody)
 
-		err := db.QueryRow(`UPDATE categories SET title = $1 WHERE id = $2`,
+		err := db.QueryRow(`UPDATE categories SET title = $1, title_en = $2 WHERE id = $3`,
 			requestBody.Title,
+			requestBody.TitleEn,
 			id)
 		if err != nil {
 			panic(err)

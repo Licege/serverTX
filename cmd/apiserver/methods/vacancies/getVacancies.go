@@ -16,10 +16,10 @@ func GetVacancies(db *sql.DB) gin.HandlerFunc {
 			panic(err)
 		}
 
-		var id, fileId, salaryFrom, salaryTo int
-		var title, requirements, description string
+		var id, salaryFrom, salaryTo int
+		var title, requirements, description, url string
 		for rows.Next() {
-			err := rows.Scan(&id, &title, &requirements, &description, &salaryFrom, &salaryTo, &fileId)
+			err := rows.Scan(&id, &title, &requirements, &description, &salaryFrom, &salaryTo, &url)
 
 			if err != nil {
 				panic(err)
@@ -32,7 +32,7 @@ func GetVacancies(db *sql.DB) gin.HandlerFunc {
 				Description:  description,
 				SalaryFrom:   salaryFrom,
 				SalaryTo:     salaryTo,
-				FileId:       fileId,
+				Url:       url,
 			}
 			vacancies = append(vacancies, newVacancy)
 		}

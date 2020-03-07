@@ -18,7 +18,7 @@ func GetVacancyById(db *sql.DB) gin.HandlerFunc {
 			&vacancy.Description,
 			&vacancy.SalaryFrom,
 			&vacancy.SalaryTo,
-			&vacancy.FileId)
+			&vacancy.Url)
 
 		if err != nil {
 			panic(err)

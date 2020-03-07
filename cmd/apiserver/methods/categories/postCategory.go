@@ -12,8 +12,9 @@ func PostCategory(db *sql.DB) gin.HandlerFunc {
 		c.BindJSON(&requestBody)
 
 		var lastID int
-		err := db.QueryRow(`INSERT INTO categories(title) VALUES ($1) RETURNING id`,
-			requestBody.Title).Scan(&lastID)
+		err := db.QueryRow(`INSERT INTO categories(title, title_en) VALUES ($1, $2) RETURNING id`,
+			requestBody.Title,
+			requestBody.TitleEn).Scan(&lastID)
 		if err != nil {
 			panic(err)
 		}

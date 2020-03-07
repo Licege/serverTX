@@ -17,9 +17,9 @@ func GetCategories(db *sql.DB) gin.HandlerFunc {
 		}
 
 		var id int
-		var title string
+		var title, titleEn string
 		for rows.Next() {
-			err := rows.Scan(&id, &title)
+			err := rows.Scan(&id, &title, &titleEn)
 			if err != nil {
 				panic(err)
 			}
@@ -27,6 +27,7 @@ func GetCategories(db *sql.DB) gin.HandlerFunc {
 			newCategory := Category{
 				Id:    id,
 				Title: title,
+				TitleEn: titleEn,
 			}
 			categories = append(categories, newCategory)
 		}

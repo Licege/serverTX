@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcccd49-79e6-4772-bf95-ff5474336095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/contacts/getContacts.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/contacts/putContacts.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/contacts/struct.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishById.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishById.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/postDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/postDish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/struct.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/profession/getProfessions.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/profession/getProfessions.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/staff/postEmployee.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/staff/postEmployee.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/staff/putEmployee.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/staff/putEmployee.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/staff/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/staff/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/categories/getCategories.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/categories/getCategories.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/categories/postCategory.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/categories/postCategory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/categories/putCategory.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/categories/putCategory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/categories/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/categories/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/getVacancies.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/getVacancies.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/getVacancyById.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/getVacancyById.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/postVacancy.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/postVacancy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/putVacancy.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/putVacancy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/struct.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
