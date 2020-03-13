@@ -8,7 +8,9 @@ import (
 	"test2/cmd/apiserver/methods/categories"
 	"test2/cmd/apiserver/methods/contacts"
 	"test2/cmd/apiserver/methods/menu"
+	"test2/cmd/apiserver/methods/messages"
 	"test2/cmd/apiserver/methods/news"
+	"test2/cmd/apiserver/methods/orders"
 	"test2/cmd/apiserver/methods/profession"
 	"test2/cmd/apiserver/methods/staff"
 	"test2/cmd/apiserver/methods/users"
@@ -95,6 +97,20 @@ func main()  {
 	{
 		newsR.GET("/", news.GetNews(db))
 		newsR.GET("/:id", news.GetNewsById(db))
+		newsR.POST("/", news.PostNews(db))
+		newsR.PUT("/:id", news.UpdateNews(db))
+		newsR.DELETE("/:id", news.DeleteNews(db))
+	}
+	ordersR := r.Group("/api/orders")
+	{
+		ordersR.POST("/", orders.PostOrder(db))
+		ordersR.GET("/", orders.GetOrders(db))
+	}
+	messagesR := r.Group("/api/messages")
+	{
+		messagesR.GET("/", messages.GetMessages(db))
+		messagesR.GET("/:id", messages.GetMessage(db))
+		messagesR.DELETE("/:id", messages.DeleteMessage(db))
 	}
 
 

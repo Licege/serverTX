@@ -4,6 +4,6 @@ type News = struct {
 	Id int `json:"id"`
 	Label string `json:"label"`
 	Content string `json:"content"`
-	CreateAt int `json:"create_at"`
+	CreateAt int64 `json:"create_at"`
 	Url string `json:"url"`
 }

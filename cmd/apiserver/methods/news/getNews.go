@@ -15,7 +15,8 @@ func GetNews(db *sql.DB) gin.HandlerFunc {
 			panic(err)
 		}
 
-		var id, create_at int
+		var id int
+		var create_at int64
 		var label, content, url string
 
 		for rows.Next() {
