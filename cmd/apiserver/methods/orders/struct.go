@@ -7,4 +7,5 @@ type Order = struct {
 	Date int64 `json:"date"`
 	Count int `json:"count"`
 	Comment string `json:"comment"`
+	CreateAt int64 `json:"create_at"`
 }

@@ -10,7 +10,7 @@ func GetOrders(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		orders := []Order{}
 
-		rows, err := db.Query(`SELECT * FROM orders`)
+		rows, err := db.Query(`SELECT * FROM orders ORDER BY date DESC`)
 
 		if err != nil {
 			panic(err)
@@ -18,10 +18,10 @@ func GetOrders(db *sql.DB) gin.HandlerFunc {
 
 		var id, count int
 		var name, phone, comment string
-		var date int64
+		var date, createAt int64
 		for rows.Next() {
 
-			err := rows.Scan(&id, &name, &phone, &date, &count, &comment)
+			err := rows.Scan(&id, &name, &phone, &date, &count, &comment, &createAt)
 
 			if err != nil {
 				panic(err)
@@ -34,6 +34,7 @@ func GetOrders(db *sql.DB) gin.HandlerFunc {
 				Date: date,
 				Count: count,
 				Comment: comment,
+				CreateAt: createAt,
 			}
 			orders = append(orders, newOrder)
 		}

@@ -12,12 +12,13 @@ func PostOrder(db *sql.DB) gin.HandlerFunc {
 		c.BindJSON(&requestBody)
 
 		var id int
-		err := db.QueryRow(`INSERT INTO orders (name, phone, date, count, comment) VALUES ($1, $2, $3, $4, $5) RETURNING id`,
+		err := db.QueryRow(`INSERT INTO orders (name, phone, date, count, comment, create_at) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`,
 			requestBody.Name,
 			requestBody.Phone,
 			requestBody.Date,
 			requestBody.Count,
-			requestBody.Comment).Scan(&id)
+			requestBody.Comment,
+			requestBody.CreateAt).Scan(&id)
 
 		if err != nil {
 			panic(err)
