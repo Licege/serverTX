@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcccd49-79e6-4772-bf95-ff5474336095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/struct.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/orders/getOrders.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/orders/getOrders.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/orders/postOrder.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/orders/postOrder.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/orders/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/orders/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
