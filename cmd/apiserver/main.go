@@ -7,6 +7,7 @@ import (
 	_ "github.com/lib/pq"
 	"test2/cmd/apiserver/methods/categories"
 	"test2/cmd/apiserver/methods/contacts"
+	"test2/cmd/apiserver/methods/delivery/delivery_global_settings"
 	"test2/cmd/apiserver/methods/delivery/delivery_settings"
 	"test2/cmd/apiserver/methods/menu"
 	"test2/cmd/apiserver/methods/messages"
@@ -116,6 +117,11 @@ func main()  {
 	deliverySettingsR := r.Group("/api/delivery/settings")
 	{
 		deliverySettingsR.GET("/", delivery_settings.GetDeliverySettings(db))
+	}
+	deliveryGlobalSettingsR := r.Group("/api/delivery/global-settings")
+	{
+		deliveryGlobalSettingsR.GET("/", delivery_global_settings.GetDeliveryGlobalSettings(db))
+		deliveryGlobalSettingsR.PUT("/", delivery_global_settings.PutDeliveryGlobalSettings(db))
 	}
 
 
