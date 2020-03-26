@@ -12,9 +12,13 @@ func PutProfession (db *sql.DB) gin.HandlerFunc {
 		requestBody := Profession{}
 		c.BindJSON(&requestBody)
 
-		db.QueryRow(`UPDATE professions SET profession = $1 WHERE id = $2`,
+		_, err := db.Exec(`UPDATE professions SET profession = $1 WHERE id = $2`,
 			requestBody.Profession,
 			id)
+
+		if err != nil {
+			panic(err)
+		}
 
 		c.Status(http.StatusOK)
 	}

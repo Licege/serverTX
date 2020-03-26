@@ -11,7 +11,7 @@ func PutDeliveryGlobalSettings(db *sql.DB) gin.HandlerFunc {
 		requestBody := Settings{}
 		c.BindJSON(&requestBody)
 
-		err := db.QueryRow(`UPDATE delivery_global_settings SET is_delivery_settings = $1, phone_for_sms = $2 WHERE id = 1`,
+		_, err := db.Exec(`UPDATE delivery_global_settings SET is_delivery_working = $1, phone_for_sms = $2 WHERE id = 1`,
 			requestBody.IsDeliveryWorking,
 			requestBody.PhoneForSms)
 

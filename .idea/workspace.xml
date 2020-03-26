@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcccd49-79e6-4772-bf95-ff5474336095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/getDeliveryGlobalSettings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/putDeliveryGlobalSettings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/struct.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/putDeliverySettings.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/file/myUploadImage.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/file/uploadImage.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/cities/getCities.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/cities/putCities.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/cities/struct.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/categories/putCategory.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/categories/putCategory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/putDeliveryGlobalSettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/putDeliveryGlobalSettings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/putDeliverySettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/putDeliverySettings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/profession/putProfession.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/profession/putProfession.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/putVacancy.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/putVacancy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/newsfeed/newsfeed.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +67,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\methods" />
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2" />
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd" />
       <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver" />
-      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test 2\cmd\apiserver" />
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\file" />
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\methods" />
     </key>
   </component>
   <component name="RunDashboard">

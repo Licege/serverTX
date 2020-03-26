@@ -12,7 +12,7 @@ func PutDish(db *sql.DB) gin.HandlerFunc {
 		requestBody := Dish{}
 		c.BindJSON(&requestBody)
 
-		err := db.QueryRow(`UPDATE dishes SET title = $1, description = $2, category_id = $3, price = $4, weight = $5, url = $6 WHERE id = $7`,
+		_, err := db.Exec(`UPDATE dishes SET title = $1, description = $2, category_id = $3, price = $4, weight = $5, url = $6 WHERE id = $7`,
 			requestBody.Title,
 			requestBody.Description,
 			requestBody.CategoryId,

@@ -12,10 +12,11 @@ func PutSettings(db *sql.DB) gin.HandlerFunc {
 		requestBody := Settings{}
 		c.BindJSON(&requestBody)
 
-		err := db.QueryRow(`UPDATE delivery_settings SET city_id = $1, price_for_delivery = $2, free_delivery = $3 WHERE id = $4`,
+		_, err := db.Exec(`UPDATE delivery_settings SET city_id = $1, price_for_delivery = $2, free_delivery = $3, is_delivery = $4 WHERE id = $5`,
 			requestBody.CityId,
 			requestBody.PriceForDelivery,
 			requestBody.FreeDelivery,
+			requestBody.IsDelivery,
 			id)
 
 		if err != nil {

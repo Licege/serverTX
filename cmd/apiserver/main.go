@@ -5,7 +5,9 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
+	"test2/cmd/apiserver/file"
 	"test2/cmd/apiserver/methods/categories"
+	"test2/cmd/apiserver/methods/cities"
 	"test2/cmd/apiserver/methods/contacts"
 	"test2/cmd/apiserver/methods/delivery/delivery_global_settings"
 	"test2/cmd/apiserver/methods/delivery/delivery_settings"
@@ -17,10 +19,6 @@ import (
 	"test2/cmd/apiserver/methods/staff"
 	"test2/cmd/apiserver/methods/users"
 	"test2/cmd/apiserver/methods/vacancies"
-)
-
-var (
-	db *sql.DB
 )
 
 func main()  {
@@ -43,8 +41,7 @@ func main()  {
 		AllowHeaders:  []string{"Origin", "Content-Length", "Content-Type"},
 		ExposeHeaders: []string{"X-Total-Count"},
 	}))
-
-	//r.Static("/stat-img", "./image")
+	r.MaxMultipartMemory = 10 << 20 //10 MiB
 
 	usersR := r.Group("/api/users")
 	{
@@ -122,6 +119,16 @@ func main()  {
 	{
 		deliveryGlobalSettingsR.GET("/", delivery_global_settings.GetDeliveryGlobalSettings(db))
 		deliveryGlobalSettingsR.PUT("/", delivery_global_settings.PutDeliveryGlobalSettings(db))
+	}
+	cityR := r.Group("/api/cities")
+	{
+		cityR.GET("/", cities.GetCities(db))
+		cityR.PUT("/:id", cities.PutCities(db))
+	}
+
+	imageR := r.Group("/api/images")
+	{
+		imageR.POST("/", file.MyUploadImage(db))
 	}
 
 

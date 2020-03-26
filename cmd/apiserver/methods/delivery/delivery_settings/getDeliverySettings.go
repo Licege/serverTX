@@ -17,17 +17,20 @@ func GetDeliverySettings(db *sql.DB) gin.HandlerFunc {
 		}
 
 		var id, cityId, priceForDelivery, freeDelivery int
+		var isDelivery bool
 		for rows.Next() {
-			err := rows.Scan(&id, &cityId, &priceForDelivery, &freeDelivery)
+			err := rows.Scan(&id, &cityId, &priceForDelivery, &freeDelivery, &isDelivery)
 
 			if err != nil {
 				panic(err)
 			}
 
 			setting := Settings{
+				Id:		id,
 				CityId:           cityId,
 				PriceForDelivery: priceForDelivery,
 				FreeDelivery:     freeDelivery,
+				IsDelivery: 	isDelivery,
 			}
 
 			settings = append(settings, setting)
