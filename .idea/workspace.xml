@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcccd49-79e6-4772-bf95-ff5474336095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/getDeliveryOrders.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/postDelivery.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/deleteFile.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/getFile.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/struct.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/uploadFile.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/utils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/reviews/getReviews.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/reviews/postReview.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/reviews/struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishesByCategory.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/file/myUploadImage.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/file/uploadImage.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/uploadImage/uploadImage.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/auth/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/struct.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishById.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishById.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/postDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/postDish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/struct.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

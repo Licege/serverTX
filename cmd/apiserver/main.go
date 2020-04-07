@@ -63,7 +63,8 @@ func main()  {
 	menuR := r.Group("/api/menu")
 	{
 		menuR.GET("/", menu.GetDishes(db))
-		menuR.GET("/:id", menu.GetDishById(db))
+		menuR.GET("/dish/:id", menu.GetDishById(db))
+		menuR.GET("/category/:category", menu.GetDishesByCategory(db))
 		menuR.POST("/", menu.PostDish(db))
 		menuR.PUT("/:id", menu.PutDish(db))
 		menuR.DELETE("/:id", menu.DeleteDish(db))
