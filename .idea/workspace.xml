@@ -2,22 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcccd49-79e6-4772-bf95-ff5474336095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/file/myUploadImage.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/file/uploadImage.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/cities/getCities.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/cities/putCities.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/cities/struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/getDeliveryOrders.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/postDelivery.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/deleteFile.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/getFile.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/uploadFile.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/files/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/reviews/getReviews.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/reviews/postReview.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/reviews/struct.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/file/myUploadImage.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/file/uploadImage.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/uploadImage/uploadImage.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/categories/putCategory.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/categories/putCategory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/putDeliveryGlobalSettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_global_settings/putDeliveryGlobalSettings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/auth/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/getDeliverySettings.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/putDeliverySettings.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/putDeliverySettings.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/delivery_settings/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/delivery/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishById.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishById.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/postDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/postDish.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/putDish.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/profession/putProfession.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/profession/putProfession.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/putVacancy.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/vacancies/putVacancy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform/newsfeed/newsfeed.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/menu/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +63,13 @@
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\PC\Desktop\Сайт\Сервер\test2\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1T9a5KsecQ5E7Vjr29o8B34nZiG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -62,16 +79,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmd/apiserver/methods" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\methods" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\uploadImage" />
+      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\methods\upload" />
       <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2" />
       <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd" />
       <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver" />
-      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\file" />
-      <recent name="C:\Users\PC\Desktop\Сайт\Сервер\test2\cmd\apiserver\methods" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,6 +104,26 @@
           <option name="name" value="StatusDashboardGroupingRule" />
         </RuleState>
       </list>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3beda64" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3beda64" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@18441a1a" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
     </option>
   </component>
   <component name="TypeScriptGeneratedFilesManager">

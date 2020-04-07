@@ -9,19 +9,23 @@ import (
 func PostDish(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		requestBody := Dish{}
-		c.BindJSON(&requestBody)
+		err := c.BindJSON(&requestBody)
+
+		if err != nil {
+			panic(err.Error())
+		}
 
 		var lastID int
-		err := db.QueryRow("INSERT INTO dishes (title, description, category_id, price, weight, url) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id",
+		err = db.QueryRow("INSERT INTO dishes (title, description, category_id, price, weight, file_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id",
 		requestBody.Title,
 		requestBody.Description,
 		requestBody.CategoryId,
 		requestBody.Price,
 		requestBody.Weight,
-		requestBody.Url).Scan(&lastID)
+		requestBody.File.Id).Scan(&lastID)
 
 		if err != nil {
-			panic(err)
+			panic(err.Error())
 		}
 
 		c.JSON(http.StatusOK, lastID)

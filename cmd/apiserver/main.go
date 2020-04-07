@@ -5,17 +5,19 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
-	"test2/cmd/apiserver/file"
 	"test2/cmd/apiserver/methods/categories"
 	"test2/cmd/apiserver/methods/cities"
 	"test2/cmd/apiserver/methods/contacts"
+	"test2/cmd/apiserver/methods/delivery"
 	"test2/cmd/apiserver/methods/delivery/delivery_global_settings"
 	"test2/cmd/apiserver/methods/delivery/delivery_settings"
+	"test2/cmd/apiserver/methods/files"
 	"test2/cmd/apiserver/methods/menu"
 	"test2/cmd/apiserver/methods/messages"
 	"test2/cmd/apiserver/methods/news"
 	"test2/cmd/apiserver/methods/orders"
 	"test2/cmd/apiserver/methods/profession"
+	"test2/cmd/apiserver/methods/reviews"
 	"test2/cmd/apiserver/methods/staff"
 	"test2/cmd/apiserver/methods/users"
 	"test2/cmd/apiserver/methods/vacancies"
@@ -54,7 +56,7 @@ func main()  {
 	{
 		employeeR.GET("/", staff.GetEmployees(db))
 		employeeR.GET("/:id", staff.GetEmployeeById(db))
-		employeeR.POST("/", staff.PostEmployee(db))  // Инты отправлять не в ""
+		employeeR.POST("/", staff.PostEmployee(db))
 		employeeR.PUT("/:id", staff.PutEmployee(db))
 		employeeR.DELETE("/:id", staff.DeleteEmployee(db))
 	}
@@ -111,6 +113,11 @@ func main()  {
 		messagesR.GET("/:id", messages.GetMessage(db))
 		messagesR.DELETE("/:id", messages.DeleteMessage(db))
 	}
+	deliveryR := r.Group("/api/delivery")
+	{
+		deliveryR.GET("/", delivery.GetDeliveryOrders(db))
+		deliveryR.POST("/", delivery.PostDelivery(db))
+	}
 	deliverySettingsR := r.Group("/api/delivery/settings")
 	{
 		deliverySettingsR.GET("/", delivery_settings.GetDeliverySettings(db))
@@ -125,25 +132,20 @@ func main()  {
 		cityR.GET("/", cities.GetCities(db))
 		cityR.PUT("/:id", cities.PutCities(db))
 	}
-
-	imageR := r.Group("/api/images")
+	reviewsR := r.Group("/api/reviews")
 	{
-		imageR.POST("/", file.MyUploadImage(db))
+		reviewsR.GET("/", reviews.GetReviews(db))
+		reviewsR.POST("/", reviews.PostReview(db))
 	}
+
+	imageR := r.Group("/api/file")
+	{
+		imageR.POST("/", files.FileUploadFunc(db))
+		imageR.DELETE("/:id", files.DeleteFile(db))
+	}
+
+	r.GET("/api/upload/:id", files.GetFile) // получаем файл по ссылке
 
 
 	r.Run(":9090")
-
-	/*
-
-	func LiberalCORS(c *gin.Context) {
-		c.Header("Access-Control-Allow-Origin", "*")
-		if c.Request.Method == "OPTIONS" {
-			if len(c.Request.Header["Access-Control-Request-Headers"]) > 0 {
-				c.Header("Access-Control-Allow-Headers", c.Request.Header["Access-Control-Request-Headers"][0])
-			}
-			c.AbortWithStatus(http.StatusOK)
-		}
-	}
-	 */
 }

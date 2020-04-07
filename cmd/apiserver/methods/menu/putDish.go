@@ -18,7 +18,7 @@ func PutDish(db *sql.DB) gin.HandlerFunc {
 			requestBody.CategoryId,
 			requestBody.Price,
 			requestBody.Weight,
-			requestBody.Url,
+			requestBody.File.Id,
 			id)
 
 		if err != nil {

@@ -8,7 +8,7 @@ import (
 
 func GetDeliverySettings(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		settings := []Settings{}
+		var settings []Settings
 
 		rows, err := db.Query(`SELECT * FROM delivery_settings`)
 

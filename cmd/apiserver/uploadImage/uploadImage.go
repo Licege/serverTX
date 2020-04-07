@@ -1,4 +1,4 @@
-package file
+package uploadImage
 
 import (
 	"io/ioutil"
@@ -20,13 +20,13 @@ func UploadImage(response http.ResponseWriter, request *http.Request) {
 	//upload Image
 	tempImage, err := ioutil.TempFile("images", "image-*.jpg")
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 	defer tempImage.Close()
 
 	fileBytes, err := ioutil.ReadAll(file)
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 	tempImage.Write(fileBytes)
 }

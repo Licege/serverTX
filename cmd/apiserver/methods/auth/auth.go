@@ -4,7 +4,28 @@ import (
 	"encoding/base64"
 	"net/http"
 	"strings"
+	"time"
+
+	jwt "github.com/dgrijalva/jwt-go"
 )
+
+func GenerateJWT() (string, error) {
+	token := jwt.New(jwt.SigningMethodES512)
+
+	claims := token.Claims.(jwt.MapClaims)
+
+	claims["authorized"] = true
+	claims["user"] = "User User"
+	claims["exp"] = time.Now().Add(time.Minute * 30).Unix()
+
+	tokenString, err := token.SignedString("password")
+
+	if err != nil {
+		return "", err
+	}
+
+	return tokenString, nil
+}
 
 func BasicAuth(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
