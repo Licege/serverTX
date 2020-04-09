@@ -11,7 +11,7 @@ func GetUsers(db *sql.DB) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		queryPage := c.DefaultQuery("page", "1")
 		perPage := 10
-		users := []User{}
+		var users []User
 		page, _ := strconv.ParseInt(queryPage, 10, 64)
 		limit := 10 * (page - 1)
 		var count int

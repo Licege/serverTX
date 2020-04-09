@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fcccd49-79e6-4772-bf95-ff5474336095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/apiserver/methods/menu/getDishesByCategory.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/apiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/news/getNews.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/news/getNews.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/news/getNewsById.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/news/getNewsById.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/news/postNews.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/news/postNews.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/news/putNews.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/news/putNews.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/news/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/news/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/apiserver/methods/users/getUsers.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/apiserver/methods/users/getUsers.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

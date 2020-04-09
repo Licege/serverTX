@@ -12,24 +12,17 @@ func PostNews(db *sql.DB) gin.HandlerFunc {
 		c.BindJSON(&requestBody)
 
 		var id int
-		err := db.QueryRow(`INSERT INTO news(label, content, create_at, url) VALUES ($1, $2, $3, $4) RETURNING id`,
-			requestBody.Label,
-			requestBody.Content,
+		err := db.QueryRow(`INSERT INTO news(title, description, create_at, short_description, file_id) VALUES ($1, $2, $3, $4) RETURNING id`,
+			requestBody.Title,
+			requestBody.Description,
 			requestBody.CreateAt,
-			requestBody.Url).Scan(&id)
+			requestBody.ShortDescription,
+			requestBody.File.Id).Scan(&id)
 
 		if err != nil {
 			panic(err)
 		}
 
-		news := News{
-			Id: id,
-			Label: requestBody.Label,
-			Content: requestBody.Content,
-			CreateAt: requestBody.CreateAt,
-			Url: requestBody.Url,
-		}
-
-		c.JSON(http.StatusOK, news)
+		c.JSON(http.StatusOK, id)
 	}
 }

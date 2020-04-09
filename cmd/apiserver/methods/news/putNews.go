@@ -12,10 +12,11 @@ func UpdateNews(db *sql.DB) gin.HandlerFunc {
 		requestBody := News{}
 		c.BindJSON(&requestBody)
 
-		_, err := db.Exec(`UPDATE news SET label = $1, content = $2, url = $3 WHERE id = $4`,
-			requestBody.Label,
-			requestBody.Content,
-			requestBody.Url,
+		_, err := db.Exec(`UPDATE news SET title = $1, description = $2, short_description = $3, file_id = $4 WHERE id = $5`,
+			requestBody.Title,
+			requestBody.Description,
+			requestBody.ShortDescription,
+			requestBody.File.Id,
 			id)
 
 		if err != nil {
